@@ -2,13 +2,13 @@ group 'com.jhomlala.better_player.better_player'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.mediaVersion = "1.8.0"
+    ext.exoPlayerVersion = "2.17.1"
     ext.lifecycleVersion = "2.9.3"
     ext.annotationVersion = "1.9.1"
     ext.workVersion = "2.10.4"
-    ext.coreVersion = "1.13.1"
-    ext.gradleVersion = "8.5.0"
-    ext.kotlinVersion = "2.2.20"
+    ext.coreVersion = "1.6.0"
+    ext.gradleVersion = "8.13.0"
+    ext.kotlinVersion = "2.1.0"
 
     repositories {
         google()
@@ -53,12 +53,12 @@ android {
     }
 
     dependencies {
-        implementation "androidx.media3:media3-exoplayer:$mediaVersion"
-        implementation "androidx.media3:media3-exoplayer-hls:$mediaVersion"
-        implementation "androidx.media3:media3-exoplayer-dash:$mediaVersion"
-        implementation "androidx.media3:media3-exoplayer-smoothstreaming:$mediaVersion"
-        implementation "androidx.media3:media3-ui:$mediaVersion"
-        implementation "androidx.media3:media3-session:$mediaVersion"
+        implementation "com.google.android.exoplayer:exoplayer-core:$exoPlayerVersion"
+        implementation "com.google.android.exoplayer:exoplayer-hls:$exoPlayerVersion"
+        implementation "com.google.android.exoplayer:exoplayer-dash:$exoPlayerVersion"
+        implementation "com.google.android.exoplayer:exoplayer-smoothstreaming:$exoPlayerVersion"
+        implementation "com.google.android.exoplayer:exoplayer-ui:$exoPlayerVersion"
+        implementation "com.google.android.exoplayer:extension-mediasession:$exoPlayerVersion"
         implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion"
         implementation "androidx.lifecycle:lifecycle-common:$lifecycleVersion"
         implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
